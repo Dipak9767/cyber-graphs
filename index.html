@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cyber Threats Graph</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <script src="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="Container">
+        <nav class="main-menu" id="menu-container">
+            <div class="menu-links">
+                <img src="./images/menu.png" height="20px" id="menu-btn" alt="">
+                <div class="links">
+                    <a href="#">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-globe fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-comments fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-camera-retro fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-film fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-book fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-cogs fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-globe fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-comments fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-camera-retro fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-film fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-book fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-cogs fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                    <a href="#">
+                        <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text" id="menu-link">
+                            Demo Links
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="log-out">
+                <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text" id="menu-link">
+                    Logout
+                </span>
+            </a>
+        </nav>
+        <main>
+            <header>
+                <div class="header">
+                    <h1>SAVE</h1>
+                    <h3>Cyber Threats Graph</h3>
+                </div>
+            </header>
+            <div class="charts" id="chart-container">
+                <div id="LineChart" class='chart'></div>
+                <div class="chart">
+                    <div id="MapChart"></div>
+                </div>
+                <div id="BarChart" class='chart'></div>
+                <div id="PieChart" class='chart'></div>
+                <div id="BarChart2" class='chart'></div>
+                <div id="ColumnChart" class='chart'></div>
+                 <div class="tablechart">
+                    <table id="example" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Cedric Kelly</td>
+                                <td>Senior Javascript Developer</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2012-03-29</td>
+                                <td>$433,060</td>
+                            </tr>
+                            <tr>
+                                <td>Airi Satou</td>
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>33</td>
+                                <td>2008-11-28</td>
+                                <td>$162,700</td>
+                            </tr>
+                            <tr>
+                                <td>Colleen Hurst</td>
+                                <td>Javascript Developer</td>
+                                <td>San Francisco</td>
+                                <td>39</td>
+                                <td>2009-09-15</td>
+                                <td>$205,500</td>
+                            </tr>
+                            <tr>
+                                <td>Sonya Frost</td>
+                                <td>Software Engineer</td>
+                                <td>Edinburgh</td>
+                                <td>23</td>
+                                <td>2008-12-13</td>
+                                <td>$103,600</td>
+                            </tr>
+                            <tr>
+                                <td>Jena Gaines</td>
+                                <td>Office Manager</td>
+                                <td>London</td>
+                                <td>30</td>
+                                <td>2008-12-19</td>
+                                <td>$90,560</td>
+                            </tr>
+                            <tr>
+                                <td>Quinn Flynn</td>
+                                <td>Support Lead</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2013-03-03</td>
+                                <td>$342,000</td>
+                            </tr>
+
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Office</th>
+                                <th>Age</th>
+                                <th>Start date</th>
+                                <th>Salary</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div> -->
+            </div>
+        </main>
+    </div>
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>
